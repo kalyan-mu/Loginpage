@@ -29,11 +29,11 @@
                     <div >
                         <div class="div1" id="border1">
                             <img class="img1" src="mail.jpg" alt="jdnvjdn" >
-                            <input class="enter" id="mail" type="mail" placeholder="E-Mail" name="">
+                            <input class="usermail" id="mail" type="mail" placeholder="E-Mail" value="">
                         </div><br>
                         <div class="div1" id="border2">
                             <img class="img1" src="lock.jpg" alt="jdnvjdn" >
-                            <input class="enter" id="password" type="password" placeholder="Password" name="">
+                            <input class="userpassword" id="password" type="password" placeholder="Password" value="">
                         </div><br>
                         <div class="div1">
                             <input id="keep" type="checkbox"><b>Keep Me Logged In</b>
@@ -43,14 +43,14 @@
                         <button onclick="myFunction()" type="button" class="btn btn-primary"><b>Go  !</b></button>
                         <script>
                             function myFunction() {
-                                let print;
-                                var enter = document.getElementsByClassName("enter").name;
-                                if(isNaN(enter)){
+                                let usermail ="" + document.getElementsByClassName("usermail").value;
+                                let userpassword ="" + document.getElementsByClassName("userpassword").value;
+                                if(isNaN(usermail || userpassword)){
                                     alert("Fill the given details")
                                 } else {
                                      alert("Login as been saved")
                                 }
-                               document.getElementById("demo").innerHTML=print;
+                               
                             }
                         </script>
                     </div>
